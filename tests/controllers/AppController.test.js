@@ -1,5 +1,5 @@
 /* eslint-disable import/no-named-as-default */
-import dbClient from '../../utils/db';
+import dbClient from '../../utils/db1';
 
 describe('+ AppController', () => {
   before(function (done) {
