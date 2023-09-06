@@ -17,8 +17,7 @@ class RedisClient {
   }
 
   async get(key) {
-    const value = await this.getAsync(key);
-    return value;
+    return await this.getAsync(key);
   }
 
   async set(key, value, duration) {
@@ -26,11 +25,10 @@ class RedisClient {
     this.client.expire(key, duration);
   }
 
-  // delete function
   async del(key) {
     this.client.del(key);
   }
 }
 
 const redisClient = new RedisClient();
-export default redisClient;
+module.exports = redisClient;
